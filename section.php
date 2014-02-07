@@ -47,6 +47,7 @@ class PLheroUnit extends PageLinesSection {
 			array(
 				'key'			=> 'pagelines_herounit_image',
 				'type'			=> 'image_upload',
+				'has_alt'		=> true,
 				'label'			=> __( 'Upload Custom Image', 'pagelines' ) ),
             array(
                 'key'			=> 'herounit_reverse',
@@ -191,8 +192,12 @@ class PLheroUnit extends PageLinesSection {
 	   	if( $hero_rt_width )
 			printf( '<div class="pl-hero-image %s">', $hero_rt_width);
 
-		if( $hero_img )
-			printf( '<div class="hero_image"><img class="pl-imageframe" data-sync="pagelines_herounit_image" src="%s" /></div>', apply_filters( 'pl_hero_image', $hero_img ) );
+		if( $this->opt( 'pagelines_herounit_image' ) )
+		
+		
+			printf( '<div class="hero_image">%s</div>', 
+			apply_filters( 'pl_hero_image', $this->image( 'pagelines_herounit_image', false, array( 'pl-imageframe' ) ) )
+			);
 
 		?>
 			</div>
