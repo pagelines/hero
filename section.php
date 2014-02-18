@@ -147,16 +147,16 @@ class PLheroUnit extends PageLinesSection {
 	*/
    function section_template() {
 
-		$hero_lt_width = $this->opt( 'herounit_left_width', $this->oset );
-		$hero_rt_width = $this->opt( 'herounit_right_width', $this->oset );
+		$hero_lt_width = $this->opt( 'herounit_left_width' );
+		$hero_rt_width = $this->opt( 'herounit_right_width' );
    		$hero_title = $this->opt( 'pagelines_herounit_title', $this->tset );
 		$hero_tag = $this->opt( 'pagelines_herounit_tagline', $this->tset );
 		$hero_img = $this->opt( 'pagelines_herounit_image', $this->tset );
-		$hero_butt_link = $this->opt( 'herounit_button_link', $this->oset );
-		$hero_butt_text = $this->opt( 'herounit_button_text', $this->oset );
-		$hero_butt_target = ( $this->opt( 'herounit_button_target', $this->oset ) ) ? ' target="_blank"': '';
-		$hero_butt_theme = $this->opt( 'herounit_button_theme', $this->oset );
-        $hero_reverse = ( $this->opt( 'herounit_reverse', $this->oset ) ) ? 'pl-hero-reverse': '';
+		$hero_butt_link = $this->opt( 'herounit_button_link' );
+		$hero_butt_text = $this->opt( 'herounit_button_text' );
+		$hero_butt_target = ( $this->opt( 'herounit_button_target' ) ) ? ' target="_blank"': '';
+		$hero_butt_theme = $this->opt( 'herounit_button_theme' );
+        $hero_reverse = ( $this->opt( 'herounit_reverse' ) ) ? 'pl-hero-reverse': '';
 
 		if ( ! $hero_rt_width )
 			$hero_rt_width = 'span6';
